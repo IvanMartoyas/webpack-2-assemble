@@ -1,0 +1,38 @@
+ВСЕ ПЛАГИНЫ УСТАНОВЛЕННЫЕ СДЕСЬ ИДУТ СНИЗУ ВВЕРХ
+......................................................................
+webpack-merge позволяет выносить части конфига webpack по файлам 
+
+в файле
+module.exports = () => {
+    return {  .... сюда вставляется часть конфига .....   }
+}
+
+в webpack.config.js 
+const js = require('./webpack-modules/js')
+const common =  merge([
+  {},
+  js()
+])
+module.exports = common
+......................................................................
+
+imagemin-webpack-plugin оптимизация веса изображений
+
+npm i mini-css-extract-plugin делает минификацию сыы
+
+npm i style-loader необходим для обрабодки css
+
+npm i clean-webpack-plugin после того как сборка выполнется повторно в dist останутся старые файлы, это плагин при каждой сборке будет удалять старвые
+
+html-webpack-plugin позволяет при сборке webpck переносить также html файлы в папку готовой сборки 
+
+cross-env позволяет в package.js при написании скриптов, определять (NODE_ENV) 
+т.е. в каком режиме находится вэбпак (разработка или продакшен)
+
+cross-env NODE_ENV=production webpack --mode production
+
+это значит что выполнив (NODE_ENV=production) NODE_ENV будет присвоено значение production при запуске
+
+
+
+npm i webpack webpack-cli -D

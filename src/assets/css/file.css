@@ -1,5 +1,14 @@
+@import "normalize.css";
+
 h1 {
     color: red;
+    background: #000000;
     opacity: 1;
+    border: #c;
+}
+.header {
+    height: 600px;
+    width: 100%;
+    background-image: url('/assets/img/WAR-PEACE-17.jpg');
 }
 /* fasdfdsa */
